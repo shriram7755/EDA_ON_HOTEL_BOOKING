@@ -1,22 +1,22 @@
-Hotel-Booking-Analysis
+# Hotel-Booking-Analysis
 The project contains the real world data record of hotel bookings of a city and a resort hotel containing details like bookings, cancellations, guest details etc. from 2015 to 2017. In this project we are going to analyze Hotel Booking Data in order to find out valuable insights and give suggestions to increase revenue of hotels.
 
-Programming Language : Python
+**Programming Language** : Python
 
-Libraries used : Pandas, Numpy, Matplotlib, Seaborn
+**Libraries used** : Pandas, Numpy, Matplotlib, Seaborn
 
-NoteBook : Google Colab
+**NoteBook** : Google Colab
 
-Dataset Source : Provided by Almabetter themself.
+**Dataset Source** : Provided by Almabetter themself.
 
-Objective
+## Objective
 We are provided with a hotel bookings dataset.
 
 The main purpose of this study is to perform EDA on the given dataset and draw useful conclusions about the trends in hotel bookings and how factors that control hotel bookings influence each other.
 
-Dataset
+## Dataset 
 We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
-
+```
 - hotel: Name of hotel ( City or Resort)
 - is_canceled: Whether the booking is canceled or not (0 for no canceled and 1 for canceled)
 - lead_time: time (in days) between booking transaction and actual arrival.
@@ -49,28 +49,40 @@ We are given a hotel bookings dataset. This dataset contains booking information
 - total_of_special_requests: total no. of special request.
 - reservation_status: Whether a customer has checked out or canceled,or not showed 
 - reservation_status_date: Date of making reservation status.
-Total number of rows in data: 119390
-Total number of columns: 32
-Data Cleaning and Feature Engineering
-(1) Handling null values
-Null values in columns company and agent were replaced by 0.
-Null values in column country were replaced by 'others'.
-Null values in column children were replaced by the mean of the column.
-(2) Removing Duplicate rows
+```
+
+- Total number of rows in data: 119390
+- Total number of columns: 32
+
+## Data Cleaning and Feature Engineering
+
+### (1) Handling null values
+- Null values in columns `company` and `agent` were replaced by 0.
+- Null values in column `country` were replaced by 'others'.
+- Null values in column `children` were replaced by the mean of the column.
+
+### (2) Removing Duplicate rows
 All duplicate rows were dropped.
 
-(3) Converting columns to appropriate data types
-Changed data type of children, company, agent to int type.
-(4) Renaming the columns
-The adr column was renamed for better understanding to average_daily_rate
-(4) Removing outliers
-One outlier was found in the average_daily_rate column. Dropping them.
-(5) Creating new columns
-Creating new column Total_stay by adding stays_in_weekend_nights+stays_in_week_nights.
-Creating new column Total_members by adding adults+children+babies.
-Exploratory Data Analysis
+### (3) Converting columns to appropriate data types
+
+- Changed data type of `children`, `company`, `agent` to int type.
+### (4) Renaming the columns
+
+- The `adr` column was renamed for better understanding to `average_daily_rate`
+
+### (4) Removing outliers
+- One outlier was found in the `average_daily_rate` column. Dropping them.
+
+### (5) Creating new columns
+- Creating new column `Total_stay` by adding `stays_in_weekend_nights`+`stays_in_week_nights`.
+- Creating new column `Total_members` by adding `adults`+`children`+`babies`.
+
+## Exploratory Data Analysis
+
 Performed EDA and tried answering the following questions:
 
+```
  Q1) Which hotel has more no of bookings and What is the  percentage of bookings in each hotel ?
  Q2) Hotel Wise Bookings based on Month and year also What is the trend of bookings within a month ?
  Q3) Which meal type is the  most preffered meal of customers ?
@@ -88,17 +100,20 @@ Performed EDA and tried answering the following questions:
  Q16) Chances that its customer will return for another stay?
  Q17) Which types of customers mostly make bookings?
  Q18) How many customers are most likely to require a parking space?
+```
+
 Mainly performed using Matplotlib and Seaborn library and the following graph and plots had been used:
+   - Bar Plot.
+   - Scatter Plot.
+   - Pie Chart.
+   - Line Plot.
+   - Heatmap.
+   - Box Plot
+             
+## Analysis:
 
-Bar Plot.
-Scatter Plot.
-Pie Chart.
-Line Plot.
-Heatmap.
-Box Plot
-Analysis:
 Performed analysis and made following conclusions:
-
+```
  1.) 61% bookings are for City hotel and 39% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel. 
  2.) July- August are the most busier and profitable months for both of hotels.  
  3.) Most popular meal type is BB(Bed and Breakfast).
@@ -112,7 +127,10 @@ Performed analysis and made following conclusions:
  11.) Both hotels have very small percentage that customer will repeat.
  12.) Arrivals in hotels increases at weekends and also the average daily rate tends to go up as month ends. 
  13.) Moslty bookings are done by couples(bookings have two adults.)
-Conclusion
+```
+## Conclusion
+
+```
 (1) 61% bookings are for City hotel and 39% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel. Also the overall average daily rate of City hotel is slightly higher than Resort hotel.
 (2) Mostly guests stay for less than 5 days in hotel and for longer stays Resort hotel is preferred.
 (3) Most of the guests came from european countries, with most of guests coming from Portugal.
@@ -124,7 +142,9 @@ Conclusion
 (9) For customers, generally the longer stays (more than 15 days) can result in better deals in terms of low average daily rate.
 (10) November, December, January and February are the months which has least bookings so in this periods you can get rooms with less average daily rate.
 And many more conclusion
-Challenges
+```
+## Challenges
+```
 (1) Lot of null values were present in the dataset.
 (2) Data type of some Data was in wrong format.
 (3) Lot of duplicate data.
